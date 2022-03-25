@@ -12,12 +12,15 @@ public class GameController : MonoBehaviour
     public int life = 5;
     public bool isGameLose = false;
     public GameObject[] predefinedShape;
+    public Text scoreText;
+    public GameObject[] starLife;
+    public Sprite[] predifinedShapeUI;
+    public Image predefinedShapeUIContainer;
 
-    public Text ScoreText;
-    public Text LifeText;
     // Start is called before the first frame update
     void Start()
     {
+        scoreText.text = "0";
         StartCoroutine(spawnSystem());
         StartCoroutine(delayShapeChange());
     }
@@ -33,6 +36,7 @@ public class GameController : MonoBehaviour
             }
             predefinedShape[randomShape].SetActive(true);
             validShape = predefinedShape[randomShape].GetComponent<ShapeController>().shapeName;
+            predefinedShapeUIContainer.sprite = predifinedShapeUI[randomShape];
             yield return new WaitForSeconds(5);
         }
     }
@@ -41,7 +45,7 @@ public class GameController : MonoBehaviour
     {
         while(!isGameLose)
         {
-            float randomTime = Random.RandomRange(0.5f,2);
+            float randomTime = Random.RandomRange(0.3f,1.3f);
             yield return new WaitForSeconds(randomTime);
             float randomDrag = Random.RandomRange(2,5);
             int randomPositions = Random.RandomRange(0, positions.Length);
@@ -52,6 +56,7 @@ public class GameController : MonoBehaviour
         }
     }
 
+    int counter = 0;
     // Update is called once per frame
     void Update()
     {
@@ -69,12 +74,17 @@ public class GameController : MonoBehaviour
                     if(hit.collider.gameObject.GetComponent<ShapeController>().shapeName == validShape)
                     {
                         score++;
-                        ScoreText.text = score.ToString();
+                        if(score%5==0 && life < 5)
+                        {
+                            starLife[life].SetActive(true);
+                            life++;
+                        }
+                        scoreText.text = score.ToString();
                     }
                     else
                     {
-                        LifeText.text = life.ToString();
                         life--;
+                        starLife[life].SetActive(false);
                     }
                     if(life<=0)
                     {
@@ -87,5 +97,16 @@ public class GameController : MonoBehaviour
                 //print(hit.collider.name);
             }
         }
+
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
+    void LifeUpdate(int l)
+    {
+        //for(0)
     }
 }

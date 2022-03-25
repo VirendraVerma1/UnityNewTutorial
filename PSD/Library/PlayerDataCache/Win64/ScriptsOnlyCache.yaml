@@ -1,8 +1,11 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - FreeModifier
     - GameController
     - ShapeController
+    - UniformModifier
+    - UnityEngine.UI.ProceduralImage.ProceduralImage
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -61,6 +64,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 2740}
     - Class: 114
       Script: {instanceID: 3316}
+    - Class: 114
+      Script: {instanceID: 23654}
+    - Class: 114
+      Script: {instanceID: 23668}
+    - Class: 114
+      Script: {instanceID: 23672}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -72,6 +81,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -148,7 +159,7 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: d93c429671f39290c07cbf60766cd61f
+      Hash: 2c81982904a6ef4a715da2ad0137c1f9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameController
@@ -512,6 +523,36 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 896b6dcfd376c37c92772de108d7a4b2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityEngine.UI.ProceduralImage
+    className: ProceduralImage
+  - hash:
+      serializedVersion: 2
+      Hash: 7a0ef19a40fae8795a8b5967ce16299e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: OnlyOneEdgeModifier
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RoundModifier
+  - hash:
+      serializedVersion: 2
+      Hash: 9ab217c95f2d30d20c15fa60346413d5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FreeModifier
+  - hash:
+      serializedVersion: 2
+      Hash: bf4698a3b70ae92d7166ab31c3de7991
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UniformModifier
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
