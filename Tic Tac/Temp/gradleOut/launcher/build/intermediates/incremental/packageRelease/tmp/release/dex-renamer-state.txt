@@ -1,4 +1,0 @@
-#Sat Mar 26 14:31:34 IST 2022
-base.0=D\:\\Programs\\Unity\\Tic Tac\\Temp\\gradleOut\\launcher\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

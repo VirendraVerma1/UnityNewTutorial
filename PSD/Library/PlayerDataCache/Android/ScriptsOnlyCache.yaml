@@ -15,8 +15,10 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
@@ -51,25 +53,29 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1916}
+      Script: {instanceID: 1486}
     - Class: 114
-      Script: {instanceID: 1994}
+      Script: {instanceID: 1922}
     - Class: 114
-      Script: {instanceID: 2282}
+      Script: {instanceID: 2000}
     - Class: 114
-      Script: {instanceID: 2394}
+      Script: {instanceID: 2288}
     - Class: 114
-      Script: {instanceID: 2556}
+      Script: {instanceID: 2400}
     - Class: 114
-      Script: {instanceID: 2740}
+      Script: {instanceID: 2562}
     - Class: 114
-      Script: {instanceID: 3316}
+      Script: {instanceID: 2746}
     - Class: 114
-      Script: {instanceID: 23654}
+      Script: {instanceID: 2830}
     - Class: 114
-      Script: {instanceID: 23668}
+      Script: {instanceID: 3336}
     - Class: 114
-      Script: {instanceID: 23672}
+      Script: {instanceID: 3926}
+    - Class: 114
+      Script: {instanceID: 4052}
+    - Class: 114
+      Script: {instanceID: 4304}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -159,7 +165,7 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: 2c81982904a6ef4a715da2ad0137c1f9
+      Hash: 8b2dac61144f2b3dc364c3c22d725a16
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameController
@@ -315,6 +321,12 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RoundModifier
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -373,6 +385,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayModeRunnerCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 7a0ef19a40fae8795a8b5967ce16299e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: OnlyOneEdgeModifier
   - hash:
       serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
@@ -483,6 +501,12 @@ ScriptsOnlyBuild:
     className: TMP_Settings
   - hash:
       serializedVersion: 2
+      Hash: bf4698a3b70ae92d7166ab31c3de7991
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UniformModifier
+  - hash:
+      serializedVersion: 2
       Hash: 6980e81ddc615a861309d2d659cc3760
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -495,10 +519,22 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
+      Hash: 896b6dcfd376c37c92772de108d7a4b2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityEngine.UI.ProceduralImage
+    className: ProceduralImage
+  - hash:
+      serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ScrollbarEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 9ab217c95f2d30d20c15fa60346413d5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FreeModifier
   - hash:
       serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
@@ -525,34 +561,16 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 896b6dcfd376c37c92772de108d7a4b2
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UnityEngine.UI.ProceduralImage
-    className: ProceduralImage
-  - hash:
-      serializedVersion: 2
-      Hash: 7a0ef19a40fae8795a8b5967ce16299e
+      Hash: 66056c2209ff8e6b238f8b056c7eb331
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: OnlyOneEdgeModifier
+    className: AudioManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: RoundModifier
-  - hash:
-      serializedVersion: 2
-      Hash: 9ab217c95f2d30d20c15fa60346413d5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FreeModifier
-  - hash:
-      serializedVersion: 2
-      Hash: bf4698a3b70ae92d7166ab31c3de7991
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: UniformModifier
+    className: saveload
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

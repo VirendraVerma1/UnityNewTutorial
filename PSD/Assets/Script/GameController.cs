@@ -20,9 +20,11 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreText.text = "0";
-        StartCoroutine(spawnSystem());
-        StartCoroutine(delayShapeChange());
+        saveload.playerScore = 0;
+        saveload.Save();
+        saveload.Load();
+        var data = saveload.playerScore;
+        initializeAllPanels();
     }
 
     IEnumerator delayShapeChange()
@@ -89,7 +91,7 @@ public class GameController : MonoBehaviour
                     if(life<=0)
                     {
                         isGameLose = true;
-                        print("Game Over!!!");
+                        onGameOver();
                     }
                     hit.collider.gameObject.GetComponent<ShapeController>().activatAball();
                 }
@@ -108,5 +110,35 @@ public class GameController : MonoBehaviour
     void LifeUpdate(int l)
     {
         //for(0)
+    }
+
+    [Header("UI")]
+    public GameObject startPanel;
+    public GameObject gameOverPanel;
+    public void initializeAllPanels()
+    {
+        deactivateAllPanels();
+        startPanel.SetActive(true);
+    }
+
+    public void onStartGame()
+    {
+        deactivateAllPanels();
+        scoreText.text = "0";
+        StartCoroutine(spawnSystem());
+        StartCoroutine(delayShapeChange());
+    }
+
+    public void onGameOver()
+    {
+        deactivateAllPanels();
+        gameOverPanel.SetActive(true);
+    }
+
+    public void deactivateAllPanels()
+    {
+        startPanel.SetActive(false);
+        gameOverPanel.SetActive(false);
+
     }
 }

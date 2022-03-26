@@ -6,5 +6,6 @@ public class trigggerplacecontroller : MonoBehaviour
 {
     public int position;
     public bool occupied;
+    public string occupiedtext;
 
 }
