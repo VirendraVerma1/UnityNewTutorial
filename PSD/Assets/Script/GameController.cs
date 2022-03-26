@@ -45,9 +45,9 @@ public class GameController : MonoBehaviour
     {
         while(!isGameLose)
         {
-            float randomTime = Random.RandomRange(0.3f,1.3f);
+            float randomTime = Random.RandomRange(0.2f,0.7f);
             yield return new WaitForSeconds(randomTime);
-            float randomDrag = Random.RandomRange(2,5);
+            float randomDrag = Random.RandomRange(0.5f,3);
             int randomPositions = Random.RandomRange(0, positions.Length);
             int randomShapes = Random.RandomRange(0, shapes.Length);
             GameObject go = Instantiate(shapes[randomShapes], positions[randomPositions].position, positions[randomPositions].rotation);
